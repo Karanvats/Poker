@@ -4,3 +4,9 @@ c:\users\kvats\documents\visual studio 2017\Projects\ConsoleApp1\ConsoleApp1\bin
 c:\users\kvats\documents\visual studio 2017\Projects\ConsoleApp1\ConsoleApp1\obj\Debug\PokerKata.csprojResolveAssemblyReference.cache
 c:\users\kvats\documents\visual studio 2017\Projects\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 c:\users\kvats\documents\visual studio 2017\Projects\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+C:\Users\kvats\Documents\Poker\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\kvats\Documents\Poker\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\kvats\Documents\Poker\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\kvats\Documents\Poker\ConsoleApp1\obj\Debug\PokerKata.csprojResolveAssemblyReference.cache
+C:\Users\kvats\Documents\Poker\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\kvats\Documents\Poker\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

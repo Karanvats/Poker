@@ -64,6 +64,11 @@ namespace PokerKata
 
         private Player _EqualHandRankings(Player player1, Player player2)
         {
+            if(player1.winningCard.value==player2.winningCard.value)
+            {
+                player1.TieClause = true;
+                return player1;
+            }
             return player1.winningCard.value > player2.winningCard.value ? player1 : player2;
         }
     }

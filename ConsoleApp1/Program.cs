@@ -50,7 +50,7 @@ namespace PokerKata
                     for (int j = 0; j < 5; j++)
                     {
                         CardValue userValue;
-                        if (playerhands[i][j].Length >2 && Enum.TryParse<CardValue>( playerhands[i][j].Substring(0, 1).ToUpper(),out userValue))
+                        if (playerhands[i][j].Length > 2 && Enum.TryParse<CardValue>(playerhands[i][j].Substring(0, 1).ToUpper(), out userValue))
                         {
                             Console.Clear();
                             Console.WriteLine("Error Detected in Input Current round has been cancelled.Please try again");
@@ -64,21 +64,33 @@ namespace PokerKata
                 }
             }
 
+            FindWinner(poker);
+
+            Console.ReadLine();
+            Console.WriteLine("Do you want to play another round ?(Enter Y to continue)");
+
+
+            return Console.ReadLine() == "Y" ? false : true;
+        }
+
+        private static void FindWinner(Game poker)
+        {
             Player winner = poker.Winner();
+            if (winner.TieClause)
+            {
+                Console.WriteLine("Tie");
+                return;
+            }
             if (winner.Hand() == "high card")
             {
                 Console.WriteLine("winner is :" + winner.PlayerName + "- with High Card " + winner.winningCard.value);
+                return;
             }
             else
             {
                 Console.WriteLine("Winner is :" + winner.PlayerName + "- with " + winner.Hand() + "- with High Card " + winner.winningCard.value);
+                return;
             }
-
-            Console.ReadLine();
-            Console.WriteLine("Do you want to play another round ?");
-
-
-            return Console.ReadLine() == "Y" ? false:true ;
         }
     }
 }

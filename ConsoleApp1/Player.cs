@@ -17,6 +17,11 @@ namespace PokerKata
             get; set;
         }
 
+        public bool TieClause
+        {
+            get; set;
+        }
+
         public string PlayerName;
         public Player()
         {
