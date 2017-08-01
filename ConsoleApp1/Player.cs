@@ -144,7 +144,10 @@ namespace PokerKata
         {
             return (HasAPair() && HasThreeOfAKind());
         }
-
+        /// <summary>
+        /// Calculates the state of the hand 
+        /// </summary>
+        /// <returns></returns>
         public string Hand()
         {
             if (HasStraightFlush()) return "straight flush";
