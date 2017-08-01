@@ -37,12 +37,12 @@ namespace UnitTestsPokerhands
         }
 
         [TestMethod]
-        public void Winner()
+        public void CheckWinner()
         {
             Player john = new Player();
             Player rock = new Player();
-            UnitTestsPlayer.Flush(john);
-            UnitTestsPlayer.Straight(rock);
+            UnitTestsPlayer.GetFlushCards(john);
+            UnitTestsPlayer.GetStraightCards(rock);
             poker.AddPlayer(john);
             poker.AddPlayer(rock);
             Assert.AreEqual(john, poker.Winner());
@@ -50,11 +50,11 @@ namespace UnitTestsPokerhands
         }
 
         [TestMethod]
-        public void EqualHandRankings()
+        public void CheckWinnerWithEqualHandRankings()
         {
             Player john = new Player();
             Player rock = new Player();
-            UnitTestsPlayer.Flush(john);
+            UnitTestsPlayer.GetFlushCards(john);
             Card card1 = new Card("d", 12);
             rock.TakeCard(card1);
             Card card2 = new Card("d", 5);

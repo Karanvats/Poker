@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PokerKata;
 
 namespace UnitTestsPokerhands
@@ -15,114 +14,120 @@ namespace UnitTestsPokerhands
             john = new Player();
         }
 
-        public static void Flush(Player player)
+        public static void GetFlushCards(Player player)
         {
-            Card card1 = new Card("h", 14);
+            var card1 = new Card("h", 14);
             player.TakeCard(card1);
-            Card card2 = new Card("h", 5);
+            var card2 = new Card("h", 5);
             player.TakeCard(card2);
-            Card card3 = new Card("h", 12);
+            var card3 = new Card("h", 12);
             player.TakeCard(card3);
-            Card card4 = new Card("h", 8);
+            var card4 = new Card("h", 8);
             player.TakeCard(card4);
-            Card card5 = new Card("h", 10);
-            player.TakeCard(card5);
-        }
-        public static void Straight(Player player)
-        {
-            Card card1 = new Card("h", 14);
-            player.TakeCard(card1);
-            Card card2 = new Card("d", 13);
-            player.TakeCard(card2);
-            Card card3 = new Card("h", 12);
-            player.TakeCard(card3);
-            Card card4 = new Card("d", 11);
-            player.TakeCard(card4);
-            Card card5 = new Card("h", 10);
-            player.TakeCard(card5);
-        }
-        public static void StraightFlush(Player player)
-        {
-            Card card1 = new Card("h", 14);
-            player.TakeCard(card1);
-            Card card2 = new Card("h", 13);
-            player.TakeCard(card2);
-            Card card3 = new Card("h", 12);
-            player.TakeCard(card3);
-            Card card4 = new Card("h", 11);
-            player.TakeCard(card4);
-            Card card5 = new Card("h", 10);
-            player.TakeCard(card5);
-        }
-        public static void FourOfAKind(Player player)
-        {
-            Card card1 = new Card("h", 9);
-            player.TakeCard(card1);
-            Card card2 = new Card("c", 5);
-            player.TakeCard(card2);
-            Card card3 = new Card("s", 9);
-            player.TakeCard(card3);
-            Card card4 = new Card("d", 9);
-            player.TakeCard(card4);
-            Card card5 = new Card("c", 9);
-            player.TakeCard(card5);
-        }
-        public static void ThreeOfAKind(Player player)
-        {
-            Card card1 = new Card("h", 2);
-            player.TakeCard(card1);
-            Card card2 = new Card("c", 9);
-            player.TakeCard(card2);
-            Card card3 = new Card("h", 11);
-            player.TakeCard(card3);
-            Card card4 = new Card("h", 9);
-            player.TakeCard(card4);
-            Card card5 = new Card("c", 9);
-            player.TakeCard(card5);
-        }
-        public static void OnePair(Player player)
-        {
-            Card card1 = new Card("h", 5);
-            player.TakeCard(card1);
-            Card card2 = new Card("c", 5);
-            player.TakeCard(card2);
-            Card card3 = new Card("h", 11);
-            player.TakeCard(card3);
-            Card card4 = new Card("h", 8);
-            player.TakeCard(card4);
-            Card card5 = new Card("c", 13);
+            var card5 = new Card("h", 10);
             player.TakeCard(card5);
         }
 
-        public static void TwoPair(Player player)
+        public static void GetStraightCards(Player player)
         {
-            Card card1 = new Card("h", 5);
+            var card1 = new Card("h", 14);
             player.TakeCard(card1);
-            Card card2 = new Card("c", 5);
+            var card2 = new Card("d", 13);
             player.TakeCard(card2);
-            Card card3 = new Card("h", 9);
+            var card3 = new Card("h", 12);
             player.TakeCard(card3);
-            Card card4 = new Card("h", 9);
+            var card4 = new Card("d", 11);
             player.TakeCard(card4);
-            Card card5 = new Card("c", 4);
+            var card5 = new Card("h", 10);
             player.TakeCard(card5);
         }
-        public static void GetFullHouse(Player player)
+
+        public static void GetStraightFlushCards(Player player)
         {
-            Card card1 = new Card("h", 3);
+            var card1 = new Card("h", 14);
             player.TakeCard(card1);
-            Card card2 = new Card("c", 3);
+            var card2 = new Card("h", 13);
             player.TakeCard(card2);
-            Card card3 = new Card("h", 5);
+            var card3 = new Card("h", 12);
             player.TakeCard(card3);
-            Card card4 = new Card("h", 5);
+            var card4 = new Card("h", 11);
             player.TakeCard(card4);
-            Card card5 = new Card("c", 5);
+            var card5 = new Card("h", 10);
+            player.TakeCard(card5);
+        }
+
+        public static void GetFourOfAKindCards(Player player)
+        {
+            var card1 = new Card("h", 9);
+            player.TakeCard(card1);
+            var card2 = new Card("c", 5);
+            player.TakeCard(card2);
+            var card3 = new Card("s", 9);
+            player.TakeCard(card3);
+            var card4 = new Card("d", 9);
+            player.TakeCard(card4);
+            var card5 = new Card("c", 9);
+            player.TakeCard(card5);
+        }
+
+        public static void GetThreeOfAKindCards(Player player)
+        {
+            var card1 = new Card("h", 2);
+            player.TakeCard(card1);
+            var card2 = new Card("c", 9);
+            player.TakeCard(card2);
+            var card3 = new Card("h", 11);
+            player.TakeCard(card3);
+            var card4 = new Card("h", 9);
+            player.TakeCard(card4);
+            var card5 = new Card("c", 9);
+            player.TakeCard(card5);
+        }
+
+        public static void GetOnePairCards(Player player)
+        {
+            var card1 = new Card("h", 5);
+            player.TakeCard(card1);
+            var card2 = new Card("c", 5);
+            player.TakeCard(card2);
+            var card3 = new Card("h", 11);
+            player.TakeCard(card3);
+            var card4 = new Card("h", 8);
+            player.TakeCard(card4);
+            var card5 = new Card("c", 13);
+            player.TakeCard(card5);
+        }
+
+        public static void GetTwoPairCards(Player player)
+        {
+            var card1 = new Card("h", 5);
+            player.TakeCard(card1);
+            var card2 = new Card("c", 5);
+            player.TakeCard(card2);
+            var card3 = new Card("h", 9);
+            player.TakeCard(card3);
+            var card4 = new Card("h", 9);
+            player.TakeCard(card4);
+            var card5 = new Card("c", 4);
+            player.TakeCard(card5);
+        }
+
+        public static void GetFullHouseCards(Player player)
+        {
+            var card1 = new Card("h", 3);
+            player.TakeCard(card1);
+            var card2 = new Card("c", 3);
+            player.TakeCard(card2);
+            var card3 = new Card("h", 5);
+            player.TakeCard(card3);
+            var card4 = new Card("h", 5);
+            player.TakeCard(card4);
+            var card5 = new Card("c", 5);
             player.TakeCard(card5);
         }
 
         [TestMethod]
-        public void PlayerNoCards()
+        public void PlayerwithNoCards()
         {
             Assert.AreEqual(0, john.cards.Count);
         }
@@ -130,7 +135,7 @@ namespace UnitTestsPokerhands
         [TestMethod]
         public void TakeCards()
         {
-            Card card = new Card("h", 14);
+            var card = new Card("h", 14);
             john.TakeCard(card);
             Assert.AreEqual(1, john.cards.Count);
             Assert.AreEqual("h", john.cards[0].suit);
@@ -140,110 +145,102 @@ namespace UnitTestsPokerhands
         [TestMethod]
         public void CardsBeenDealt()
         {
-            Flush(john);
+            GetFlushCards(john);
             Assert.AreEqual(true, john.Ready());
         }
 
         [TestMethod]
         public void WhenHasAFlash()
         {
-            Flush(john);
+            GetFlushCards(john);
             Assert.AreEqual(true, john.HasFlush());
         }
 
         [TestMethod]
         public void WhenDoesntHaveAFlush()
         {
-            Straight(john);
+            GetStraightCards(john);
             Assert.AreEqual(false, john.HasFlush());
         }
 
         [TestMethod]
         public void WhenHasAStraight()
         {
-            Straight(john);
+            GetStraightCards(john);
             Assert.AreEqual(true, john.HasStraight());
         }
 
         [TestMethod]
         public void WhenDoesntHaveAStraight()
         {
-            Flush(john);
+            GetFlushCards(john);
             Assert.AreEqual(false, john.HasStraight());
         }
 
         [TestMethod]
         public void WhenHasAStraightFlush()
         {
-            StraightFlush(john);
+            GetStraightFlushCards(john);
             Assert.AreEqual(true, john.HasStraightFlush());
-
         }
 
         [TestMethod]
         public void WhenDoesntHaveAStraightFlush()
         {
-            Flush(john);
+            GetFlushCards(john);
             Assert.AreEqual(false, john.HasStraightFlush());
         }
 
         [TestMethod]
-        public void WhenHasFourOfAKind()
+        public void PlayerGetsFourOfAKind()
         {
-            FourOfAKind(john);
+            GetFourOfAKindCards(john);
             Assert.AreEqual(true, john.HasFourOfAKind());
         }
 
         [TestMethod]
-        public void WhenDoesntHaveFourOfAKind()
+        public void PlayerDoesntHaveFourOfAKind()
         {
-            Straight(john);
+            GetStraightCards(john);
             Assert.AreEqual(false, john.HasFourOfAKind());
         }
 
         [TestMethod]
-        public void WhenHasThreeOfAKind()
+        public void PlayerGetsThreeOfAKind()
         {
-            ThreeOfAKind(john);
+            GetThreeOfAKindCards(john);
             Assert.AreEqual(true, john.HasThreeOfAKind());
         }
 
-       [TestMethod]
-        public void WhenHasAPair()
+        [TestMethod]
+        public void PlayerGetsOnePair()
         {
-            OnePair(john);
+            GetOnePairCards(john);
             Assert.AreEqual(true, john.HasAPair());
         }
 
-        
+
         [TestMethod]
-        public void WhenHasFullHouse()
+        public void PlayerGetsFullHouse()
         {
-            GetFullHouse(john);
+            GetFullHouseCards(john);
             Assert.AreEqual(true, john.HasFullHouse());
         }
 
-               
-        [TestMethod]
-        public void APair()
-        {
-            OnePair(john);
-            Assert.AreEqual("a pair", john.Hand());
-        }
+
 
         [TestMethod]
-        public void FullHouse()
+        public void PlayerGetsFullHouseHand()
         {
-            GetFullHouse(john);
+            GetFullHouseCards(john);
             Assert.AreEqual("full house", john.Hand());
         }
 
         [TestMethod]
-        public void Straight()
+        public void PlayerGetsStraightHand()
         {
-            Straight(john);
+            GetStraightCards(john);
             Assert.AreEqual("straight", john.Hand());
         }
-
     }
 }

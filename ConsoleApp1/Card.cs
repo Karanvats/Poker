@@ -40,4 +40,9 @@ namespace PokerKata
         EIGHT, NINE, T, J, Q, K, A
     }
 
+    public enum Suit
+    {
+        H,C,S,D
+    }
+
 }
