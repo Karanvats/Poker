@@ -53,11 +53,12 @@ namespace PokerKata
 
             FindWinner(poker);
 
-            ReadLine();
+           
             WriteLine("Do you want to play another round ?(Enter Y to continue)");
 
 
-            _startGame = ReadLine() != "Y";
+            var readLine = ReadLine();
+            if (readLine != null) _startGame = readLine.Trim().ToUpper() != "Y";
             if (_startGame)
             {
                 poker = Reset(poker);
@@ -218,7 +219,12 @@ namespace PokerKata
         private static void FindWinner(Game poker)
         {
             var winner = poker.Winner();
-            
+            if (poker.TieState)
+            {
+                WriteLine("Its a Tie");
+                return;
+                
+            }
             if (winner.Hand() == "high card")
                 WriteLine("winner is :" + winner.PlayerName + "- with High Card " + ((CardValue)(winner.winningCard.value)).ToString());
             else

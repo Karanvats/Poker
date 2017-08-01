@@ -17,6 +17,8 @@ namespace PokerKata
         {
             get; set;
         }
+
+        public bool TieState { get; set; }
         /// <summary>
         /// Initialize the ranking and create the player storage
         /// </summary>
@@ -53,6 +55,7 @@ namespace PokerKata
                 if (this.handRankings[playersHand] < this.handRankings[winner.Hand()])
                 {
                     winner = currentPlayer;
+                    this.TieState = false;
                 }
                 else if (this.handRankings[playersHand] == this.handRankings[winner.Hand()])
                 {
@@ -66,7 +69,7 @@ namespace PokerKata
         {
             if(player1.winningCard.value==player2.winningCard.value)
             {
-                player1.TieClause = true;
+                this.TieState= true;
                 return player1;
             }
             return player1.winningCard.value > player2.winningCard.value ? player1 : player2;
